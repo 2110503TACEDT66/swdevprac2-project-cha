@@ -2,7 +2,6 @@ import getCars from "@/libs/getCars"
 import CarCatalog from "@/components/CarCatalog"
 import { Suspense } from "react"
 import { LinearProgress } from "@mui/material"
-import CarPanel from "@/components/CarPanel"
 import { CarJson } from "../../../../interfaces"
 
 export default async function Car() {
@@ -14,9 +13,6 @@ export default async function Car() {
             <Suspense fallback={<p>Loading...<LinearProgress/></p>}>
                 <CarCatalog carJson={cars}/>
             </Suspense>
-            <hr className="my-10"/>
-            <h1 className="text-xl font-medium">TRY Client-Side Car Panel</h1>
-            <CarPanel/>
         </main>
     )
 }
