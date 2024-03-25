@@ -10,7 +10,7 @@ export function TravelCard() {
     const [rating,setRating] = useState(0)
 
     return (
-        <div className="w-[100%] mt-20 rounded-lg bg-white flex flex-col justify-center items-center">
+        <div className="w-[100%] mt-40 rounded-lg bg-white flex flex-col justify-center items-center">
             <VlogPlayer vdoSrc="/video/ThailandNatural.mp4" isPlaying={playing}></VlogPlayer>
             <div className="m-5">
                 <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2

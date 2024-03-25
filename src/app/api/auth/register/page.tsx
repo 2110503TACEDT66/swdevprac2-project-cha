@@ -46,32 +46,32 @@ export default function RegisterPage() {
                 </div>
                 
                 <div className='bg-sky-200 w-2/3 m-20 rounded-3xl text-sky-600 '>
-                    <h1 className="text-3xl text-center my-10 font-bold">Register</h1>
+                    <h1 className="text-3xl text-center my-10 font-bold ">Register</h1>
                     <form onSubmit={handleSubmit}>
                         
                         <div className="flex items-center w-4/5 my-2 ml-20  " onChange={handleChange}>
-                            <label className="w-auto block test-gray-700 pr-4" htmlFor="name">
+                            <label className="w-auto block test-gray-700 pr-14 " htmlFor="name">
                                 Name</label>
                             <input type="text" required id="name" name="name" placeholder='Name'
                             className='bg-white border-2 border-gray-200 rounded w-full p-2
                             text-gray-700 focus:outline-none focus:border-blue-400'/>
                         </div>
                         <div className="flex items-center w-4/5 my-2 ml-20" onChange={handleChange}>
-                            <label className="w-auto block test-gray-700 pr-4" htmlFor="email">
+                            <label className="w-auto block test-gray-700 pr-12" htmlFor="email">
                                 Email</label>
                             <input type="text" required id="email" name="email" placeholder='Email'
                             className='bg-white border-2 border-gray-200 rounded w-full p-2
                             text-gray-700 focus:outline-none focus:border-blue-400'/>
                         </div>
                         <div className="flex items-center w-4/5 my-2 ml-20" onChange={handleChange}>
-                            <label className="w-auto block test-gray-700 pr-4" htmlFor="tel">
+                            <label className="w-auto block test-gray-700 pr-14" htmlFor="tel">
                                 Tel.</label>
                             <input type="text" required id="tel" name="tel" placeholder='012-345-6789'
                             className='bg-white border-2 border-gray-200 rounded w-full p-2
                             text-gray-700 focus:outline-none focus:border-blue-400'/>
                         </div>
                         <div className="flex items-center w-4/5 my-2 ml-20" onChange={handleChange}>
-                            <label className="w-auto block test-gray-700 pr-4" htmlFor="password">
+                            <label className="w-auto block test-gray-700 pr-5" htmlFor="password">
                                 Password</label>
                             <input type="password" required id="password" name="password" placeholder='Minimum 6 characters'
                             className='bg-white border-2 border-gray-200 rounded w-full p-2

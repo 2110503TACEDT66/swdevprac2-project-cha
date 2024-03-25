@@ -13,7 +13,7 @@ export default function DeleteButton({bookId, token}:{bookId:string, token:strin
     }
 
     return (
-        <button className="m-5 py-2 px-5 bg-red-600 text-white rounded"
+        <button className="mt-3 py-2 px-5 bg-rose-700 text-white rounded"
         onClick={ ()=>{ deleteBtn() }}>Delete</button>
     )
 }

@@ -6,7 +6,7 @@ export default function ProductCard ( { carName, imgSrc,onCompare } : {carName:s
 
     return (
         <InteractiveCard constentName = {carName}>    
-            <div className='w-full h-[70%] relative rounded-t-lg'> 
+            <div className='w-full h-[80%] relative rounded-t-lg'> 
             <Image src={imgSrc}
                 alt='Product Picture'
                 fill={true}

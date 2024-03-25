@@ -39,24 +39,26 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
 
 
     return beEditBtn ? (
-        <button className="m-5 py-2 px-5 bg-blue-500 text-white rounded"
+        <button className="py-2 px-5 bg-blue-700	 text-white rounded mr-5"
         onClick={ ()=>{setEditBtn(false)} }>Edit</button>
     ):
     (
         <div>
+            <div>_________________________________________</div>
+            <div className="mt-2 text-rose-700 text-center text-lg">Edit</div>
             <form onSubmit={handleSubmit}>
-                    <div className="flex items-center w-1/2 my-2">
-                        <label className="w-auto block test-gray-700 pr-4" htmlFor="pickupDate">
-                            Pickup Date</label>
+                    <div className="flex items-center my-2">
+                        <label className="w-auto block text-gray-700 pr-4" htmlFor="pickupDate">
+                            Pick-Up (Date)</label>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DatePicker className="bg-white" name="pickupDate"
                             value={pickupDate}
                             onChange={(value)=>{setPickupDate(value)}}/>
                         </LocalizationProvider>
                     </div>
-                    <div className="flex items-center w-1/2 my-2">
-                        <label className="w-auto block test-gray-700 pr-4" htmlFor="pickupLocation">
-                            Pickup Location</label>
+                    <div className="flex items-center my-2">
+                        <label className="w-auto block text-gray-700 pr-4" htmlFor="pickupLocation">
+                            Pickup (Location)</label>
                         <select required id="pickupLocation" name="pickupLocation"
                         className='bg-white border-2 border-gray-200 rounded w-full p-2
                         text-gray-700 focus:outline-none focus:border-blue-400'
@@ -67,18 +69,18 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
                             <option value="HKT">Phuket</option>
                         </select>
                     </div>
-                    <div className="flex items-center w-1/2 my-2">
-                        <label className="w-auto block test-gray-700 pr-4" htmlFor="returnDate">
-                            Return Date</label>
+                    <div className="flex items-center my-2">
+                        <label className="w-auto block text-gray-700 pr-4" htmlFor="returnDate">
+                            Pick-Up (Date)</label>
                         <LocalizationProvider dateAdapter={AdapterDayjs}>
                             <DatePicker className="bg-white" name="returnDate"
                             value={returnDate}
                             onChange={(value)=>{setReturnDate(value)}}/>
                         </LocalizationProvider>
                     </div>
-                    <div className="flex items-center w-1/2 my-2">
-                        <label className="w-auto block test-gray-700 pr-4" htmlFor="pickupLocation">
-                            Pickup Location</label>
+                    <div className="flex items-center my-2">
+                        <label className="w-auto block text-gray-700 pr-4" htmlFor="pickupLocation">
+                            Pickup (Location)</label>
                         <select required id="pickupLocation" name="pickupLocation"
                         className='bg-white border-2 border-gray-200 rounded w-full p-2
                         text-gray-700 focus:outline-none focus:border-blue-400'
@@ -90,11 +92,14 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
                         </select>
                     </div>
                     
-                    <button type="submit" className="bg-blue-500 hover:bg-bluue-700
+                    <button type="submit" className="bg-green-600 hover:bg-blue-700
                     text-white p-2 rounded" onSubmit={ ()=>{setEditBtn(true)} }>Edit</button>
+
+                    <button className="ml-3 mt-2 py-2 px-5 bg-yellow-500 text-white rounded hover:bg-blue-700"
+                    onClick={ ()=>{setEditBtn(true)} }>Cancel</button>
+                    <div>_________________________________________</div>
                 </form>
-            <button className="m-5 py-2 px-5 bg-red-500 text-white rounded"
-            onClick={ ()=>{setEditBtn(true)} }>Cancel</button>
+            
         </div>
     )
 }

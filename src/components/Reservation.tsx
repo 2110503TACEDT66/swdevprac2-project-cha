@@ -55,15 +55,15 @@ export default function Reservation({token}:{token:string}) {
                         <LocationDateReserve onDateChange={(value:Dayjs)=>{setReturnDate(value)}}
                         onLocationChange={(value:string)=>{setReturnLocation(value)}}/>                 
                     </div>
-                    <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2
+                    <button className="block rounded-md bg-sky-600 hover:bg-sky-700 px-3 py-2
                         shadow-sm text-white" onClick={makeReservation}>
                         Reserve this Car
                     </button>
                 </div>
 
                 <div className="rounded-lg w-[200px] h-[400px] mx-3 my-5 relative">
-                    <Image src='/img/calendar.jpg' 
-                    alt='calendar'
+                    <Image src='/img/map.jpg' 
+                    alt='map'
                     fill={true} className='object-cover absolute rounded-lg'
                     />
                 </div>

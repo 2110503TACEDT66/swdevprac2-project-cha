@@ -12,7 +12,7 @@ export default async function CarCatalog({carJson}:{carJson:CarJson}) {
                 {
                     carJsonReady.data.map((carItem:CarItem)=> (
                         <Link href={ `/car/${carItem.id}`} 
-                        className='w-[100%] sw:w-[50%] md:w-[30%] lg:w-[25%]
+                        className='w-[100%] sw:w-[50%] md:w-[30%] lg:w-[33%]
                         p-2 sm:p-4 md:p-4 lg:p-8'>
                         <ProductCard carName={carItem.model} imgSrc={carItem.picture}/>
                         </Link>
