@@ -40,18 +40,18 @@ export default function Reservation({token}:{token:string}) {
 
     return (
         <main className="w-screen mt-20 flex flex-col justify-center items-center">
-            <div className="flex flex-row">
+            <div className="flex flex-row font-mono text-sky-600">
                 <div className="flex flex-col items-center justify-center">
                     <div className="text-3xl font-medium"> New Reservation </div>
                     <div className="text-2xl font-medium mt-5"> Car : {model} </div>
 
-                    <div className="space-y-4 m-5">
-                        <div className="text-md text-left text-gray-600 ">Pick-Up (Date,Location) </div>
+                    <div className="space-y-4 m-5 mt-10 ">
+                        <div className="text-md text-left text-sky-500">Pick-Up (Date,Location) </div>
                         <LocationDateReserve onDateChange={(value:Dayjs)=>{setPickupDate(value)}}
                         onLocationChange={(value:string)=>{setPickupLocation(value)}}
                         />
                 
-                        <div className="text-md text-left text-gray-600">Reture (Date,Location) </div>
+                        <div className="text-md text-left text-sky-500">Reture (Date,Location) </div>
                         <LocationDateReserve onDateChange={(value:Dayjs)=>{setReturnDate(value)}}
                         onLocationChange={(value:string)=>{setReturnLocation(value)}}/>                 
                     </div>
@@ -61,11 +61,11 @@ export default function Reservation({token}:{token:string}) {
                     </button>
                 </div>
 
-                <div className="w-60 h-70 bg-black m-5 flex justify-center items-center">
-                     {/* <Image src='/img/cover2.jpg' 
-                     alt='cover' 
-                    fill={true}
-                    objectFit='cover'/> */}
+                <div className="rounded-lg w-[200px] h-[400px] mx-3 my-5 relative">
+                    <Image src='/img/calendar.jpg' 
+                    alt='calendar'
+                    fill={true} className='object-cover absolute rounded-lg'
+                    />
                 </div>
 
             </div>
