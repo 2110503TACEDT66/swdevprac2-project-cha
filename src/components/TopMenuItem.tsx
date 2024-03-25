@@ -1,9 +1,9 @@
-import styles from './topmenu.module.css'
-import Link from 'next/link';
+import Link from "next/link";
 
-export default function TopMenuItem ( {title, pageRef} : {title:string, pageRef:string} ) {
+export default function TopMenuItem( { title , pageRef } : { title : string , pageRef : string }  ) {
     return (
-        <Link className={styles.itemcontainer} href={pageRef}>
+        <Link href={pageRef} className='w-120 mx-5 flex items-center h-full px-2 
+        font-sans text-base text-white'>
             {title}
         </Link>
     );
