@@ -65,7 +65,7 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
                         value={pickupLocation}
                         onChange={(e)=>{setPickupLocation(e.target.value)}}>
                             <option value="BKK">Bangkok</option>
-                            <option value="CNX">Chiang Mai</option>
+                            <option value="CNK">Chiang Mai</option>
                             <option value="HKT">Phuket</option>
                         </select>
                     </div>
@@ -87,7 +87,7 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
                         value={returnLocation}
                         onChange={(e)=>{setReturnLocation(e.target.value)}}>
                             <option value="BKK">Bangkok</option>
-                            <option value="CNX">Chiang Mai</option>
+                            <option value="CNK">Chiang Mai</option>
                             <option value="HKT">Phuket</option>
                         </select>
                     </div>
