@@ -39,9 +39,9 @@ export default async function BookingPage(){
                                 <div>User: {bookItem.user}</div>
                                 <div>Car Model: {bookItem.car.model}</div>
                                 <div>Pickup Date: {dayjs(bookItem.pickupDate).format('DD/MM/YYYY')}</div>
-                                <div>Pickup Location: {bookItem.pickupLocation}</div>
+                                <div>Pickup Location: {bookItem.pickupLocation == "BKK" ? "Bangkok" : bookItem.pickupLocation == "CNK" ? "Chiang Mai" : "Phuket"}</div>
                                 <div>Return Date: {dayjs(bookItem.returnDate).format('DD/MM/YYYY')}</div>
-                                <div>Return Location: {bookItem.returnLocation}</div>
+                                <div>Return Location: {bookItem.pickupLocation == "BKK" ? "Bangkok" : bookItem.pickupLocation == "CNK" ? "Chiang Mai" : "Phuket"}</div>
                                 <EditButton bookId={bookItem._id} token={session.user.token}/>
                                 <DeleteButton bookId={bookItem._id} token={session.user.token}/>
                             </div>
