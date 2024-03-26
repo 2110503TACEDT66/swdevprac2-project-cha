@@ -40,7 +40,7 @@ export default function Reservation({token}:{token:string}) {
 
     return (
         <main className="w-screen mt-20 flex flex-col justify-center items-center">
-            <div className="flex flex-row font-mono text-sky-600">
+            <div className="ml-20 flex flex-row font-mono text-sky-600">
                 <div className="flex flex-col items-center justify-center">
                     <div className="text-3xl font-medium"> New Reservation </div>
                     <div className="text-2xl font-medium mt-5"> Car : {model} </div>

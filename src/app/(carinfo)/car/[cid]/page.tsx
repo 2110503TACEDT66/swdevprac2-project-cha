@@ -6,37 +6,42 @@ export default async function CarDetailPage( {params} : { params : {cid:string} 
     const carDetail = await getCar(params.cid)
 
     return (
-        <main className="text-center p-2">
-            <h1 className="text-xl mt-10 text-3xl font-serif  ">{carDetail.data.model}</h1>
-            <div className="mx-auto my-5 w-[30%] p-2 rounded-lg bg-white flex flex-col">
-                <div className="relative w-full h-60">
-                    <Image
-                    src={carDetail.data.picture}
-                    alt='Car Image'
-                    layout='fill'
-                    objectFit='cover'
-                    />
-                </div>
-                <div className="bg-sky-600 text-white text-lg text-center font-serif py-2"> Description </div>   
-                <div className="text-md bg-sky-200 font-mono py-3 text-left">
-                        <div className="text-md ml-10">Name: { carDetail.data.description }</div>
-                        <div className="text-md ml-10">Doors: { carDetail.data.doors }</div>
-                        <div className="text-md ml-10">Seats: { carDetail.data.seats }</div>
-                        <div className="text-md ml-10">Large Bags: { carDetail.data.largebags }</div>
-                        <div className="text-md ml-10">Small Bags: { carDetail.data.smallbags }</div>
-                        <div className="text-md ml-10">Daily Rental Rate: { carDetail.data.dayRate }</div>
-                </div>          
-            </div>
+        <main className="text-center p-2 =">
+            <h1 className="mt-10 font-mono text-3xl">{carDetail.data.model}</h1>
+            
+            <div className="mt-10 mx-auto my-5 w-[50%] p-2 rounded-lg bg-white flex flex-row">
                 
-            <div className='flex items-center justify-center h-full'>
-                <Link href={`/reservations?id=${params.cid}&model=${carDetail.data.model}`}>
-                    <button className="block rounded-md bg-sky-600 hover:bg-blue-900 px-3 py-2
-                    shadow-sm text-white">
-                        Make Reservation
-                    </button>
-                </Link>
-            </div>
+                <div className="flex flex-col w-[55%]">
+                    <div className="relative w-full h-full">
+                        <Image
+                        src={carDetail.data.picture}
+                        alt='Car Image'
+                        layout='fill'
+                        objectFit='cover'
+                        />
+                    </div>
+                </div>
 
+                <div className="bg-sky-100 w-[45%] ">
+                    <div className="text-lg font-mono text-left">
+                        <div className="text-xl text-center mt-6 font-semibold test-sky-500 ">Description</div>
+                        {/* <div className="text-center"> _ _ _ _ _ _ _ _ _ _ _ _ _ _ </div> */}
+                            <div className=" ml-10 mt-5">Doors: { carDetail.data.doors }</div>
+                            <div className=" ml-10 mt-3">Seats: { carDetail.data.seats }</div>
+                            <div className=" ml-10 mt-3">Large Bags: { carDetail.data.largebags }</div>
+                            <div className=" ml-10 mt-3">Small Bags: { carDetail.data.smallbags }</div>
+                            <div className="ml-10 mt-3 mb-6">Daily Rental Rate: { carDetail.data.dayRate }</div>
+                    </div>          
+
+                    <Link href={`/reservations?id=${params.cid}&model=${carDetail.data.model}`}>
+                        <button className="block bg-sky-600 hover:bg-blue-700 px-3 py-2 w-full 
+                        shadow-sm text-white"> 
+                            Make Reservation
+                        </button>
+                    </Link>
+                </div>
+
+            </div>
         </main>
     )
 }

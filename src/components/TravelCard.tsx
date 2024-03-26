@@ -11,7 +11,7 @@ export function TravelCard() {
 
     return (
         <div className="w-[100%] mt-40 rounded-lg bg-white flex flex-col justify-center items-center">
-            <VlogPlayer vdoSrc="/video/ThailandNatural.mp4" isPlaying={playing}></VlogPlayer>
+            <VlogPlayer vdoSrc="/video/carvideo.mp4" isPlaying={playing}></VlogPlayer>
             <div className="m-5">
                 <button className="block rounded-md bg-sky-600 hover:bg-indigo-600 px-3 py-2
                 text-white shadow-sm"

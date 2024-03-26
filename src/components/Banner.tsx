@@ -19,9 +19,9 @@ export default function Banner () {
             alt='cover'
             fill={true}
             objectFit='cover'/>
-            <div className='relative top-20 z-20 text-center'>
-                <h1 className='text-4xl font-mono font-semibold	'>Your Travel Partner</h1>
-                <h3 className='text-2xl font-serif font-medium'>Explore Your World with us</h3>
+            <div className='relative top-20 z-20 text-center text-sky-900 '>
+                <h1 className='text-4xl font-mono font-semibold	'>Car Rental</h1>
+                <h3 className='mt-2 text-3xl font-serif font-medium'>by Cha </h3>
             </div>
 
             <div className='flex items-center justify-center h-full'>
@@ -29,7 +29,7 @@ export default function Banner () {
                     font-semibold py-3 px-5 m-2 rounded z-20 absolute bottom-10 text-xl
                     hover:bg-sky-600 hover:text-white hover:border-transparent'
                     onClick={ (e)=> { e.stopPropagation(); router.push('/car')}}>
-                    Select Your Travel Partner NOW
+                    Select Car!
                 </button>
             </div>
 
