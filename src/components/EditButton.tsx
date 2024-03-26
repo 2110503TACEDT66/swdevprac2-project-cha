@@ -39,13 +39,13 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
 
 
     return beEditBtn ? (
-        <button className="py-2 px-5 bg-blue-700	 text-white rounded mr-5"
+        <button className="py-2 px-5 bg-blue-700 text-white rounded mr-5 hover:bg-sky-800"
         onClick={ ()=>{setEditBtn(false)} }>Edit</button>
     ):
     (
         <div>
-            <div>_________________________________________</div>
-            <div className="mt-2 text-rose-700 text-center text-lg">Edit</div>
+            <div>_____________________________________________</div>
+            <div className="mt-2 text-rose-700 text-center text-lg font-semibold ">Edit</div>
             <form onSubmit={handleSubmit}>
                     <div className="flex items-center my-2">
                         <label className="w-auto block text-gray-700 pr-4" htmlFor="pickupDate">
@@ -92,12 +92,12 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
                         </select>
                     </div>
                     
-                    <button type="submit" className="bg-green-600 hover:bg-blue-700
+                    <button type="submit" className="bg-sky-600 px-5 hover:bg-blue-700
                     text-white p-2 rounded" onSubmit={ ()=>{setEditBtn(true)} }>Edit</button>
 
-                    <button className="ml-3 mt-2 py-2 px-5 bg-yellow-500 text-white rounded hover:bg-blue-700"
+                    <button className="ml-3 mt-2 py-2 px-5 bg-yellow-500 text-white rounded hover:bg-yellow-600"
                     onClick={ ()=>{setEditBtn(true)} }>Cancel</button>
-                    <div>_________________________________________</div>
+                    <div>_____________________________________________</div>
                 </form>
             
         </div>

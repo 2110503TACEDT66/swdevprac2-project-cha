@@ -78,8 +78,10 @@ export default function RegisterPage() {
                             text-gray-700 focus:outline-none focus:border-blue-400'/>
                         </div>
                         
-                        <button type="submit" className="bg-blue-500 hover:bg-blue-700
-                        text-white p-2 rounded ml-20 mb-10">Register</button>
+                        <div className='flex items-center justify-center h-full'>                        
+                            <button type="submit" className="bg-blue-500 hover:bg-blue-700
+                            text-white p-2 rounded mb-10 px-7  mt-3">Register</button>
+                        </div>
                     </form>
                 </div>
                 
@@ -87,3 +89,12 @@ export default function RegisterPage() {
         </main>
     );
 }
+
+{/* <div className='flex items-center justify-center h-full'>
+                <button className='bg-white text-sky-600 border border-cyan-600 font-mono
+                    font-semibold py-2 px-2 m-2 rounded z-20 absolute bottom-10 
+                    hover:bg-sky-600 hover:text-white hover:border-transparent'
+                    onClick={ (e)=> { e.stopPropagation(); router.push('/car')}}>
+                    Select Your Travel Partner NOW
+                </button>
+            </div> */}
