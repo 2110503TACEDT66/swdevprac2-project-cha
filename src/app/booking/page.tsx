@@ -28,7 +28,7 @@ export default async function BookingPage(){
                     <div className="mx-auto my-10 w-[48%] shadow-lg p-2 rounded-lg  flex flex-row 
                     bg-gradient-to-r from-sky-200 via-blue-300 to-blue-200">         
                         <div className='w-[230px] h-[200px] mx-3 my-5 bg-white relative'> 
-                            <Image src={'/img/booking.jpg'} 
+                            <Image src={bookItem.car.picture} 
                             alt='booking'
                             fill={true} className='object-cover absolute shadow-xl'
                             />

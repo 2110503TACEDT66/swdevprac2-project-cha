@@ -95,7 +95,7 @@ export default function EditButton({bookId, token}:{bookId:string, token:string}
                     <button type="submit" className="bg-sky-600 px-5 hover:bg-blue-700
                     text-white p-2 rounded" onSubmit={ ()=>{setEditBtn(true)} }>Edit</button>
 
-                    <button className="ml-3 mt-2 py-2 px-5 bg-yellow-500 text-white rounded hover:bg-yellow-600"
+                    <button className="ml-3 mt-2 py-2 px-5 bg-slate-600 text-white rounded hover:bg-slate-700"
                     onClick={ ()=>{setEditBtn(true)} }>Cancel</button>
                     <div>_____________________________________________</div>
                 </form>
