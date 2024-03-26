@@ -7,6 +7,7 @@ export default function DeleteButton({bookId, token}:{bookId:string, token:strin
     const deleteBtn = async ()=>{
         try{
             await deleteBooking(bookId, token)
+            window.location.href = '/booking';
         } catch (error) {
             console.log(error)
         }
