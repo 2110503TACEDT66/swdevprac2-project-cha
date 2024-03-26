@@ -5,7 +5,7 @@ export default async function userRegister(formData:RegisterItem) {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-        },
+        }, 
         body: JSON.stringify(formData),
     });
 
