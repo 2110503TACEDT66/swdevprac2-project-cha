@@ -22,7 +22,7 @@ export default function RegisterPage() {
         e.preventDefault();
         try {
             await userRegister(formData);
-            // window.location.href = '/api/auth/signin';
+            window.location.href = '/api/auth/signin';
         } catch (error) {
             console.error(error);
             alert("Failed to register user")
